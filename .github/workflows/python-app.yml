@@ -27,6 +27,7 @@ jobs:
         run: python gate.py
       - name: set global name
         run: git config --global user.name "mat"
+      - name: set global email
         run: git config --global user.email "mitus11112@gmail.com"
       - name: switching from HTTPS to SSH
         run: git remote set-url origin https://github.com/mitus1212/Listings-Bot.git
