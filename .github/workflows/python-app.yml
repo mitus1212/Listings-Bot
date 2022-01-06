@@ -25,6 +25,8 @@ jobs:
           pip install -r requirements.txt
       - name: Run tests
         run: python gate.py
+      - name: set global name
+        run: git config --global user.email "mitus11112@gmail.com"
       - name: switching from HTTPS to SSH
         run: git remote set-url origin https://github.com/mitus1212/Listings-Bot.git
       - name: check for changes
