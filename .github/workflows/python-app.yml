@@ -39,7 +39,5 @@ jobs:
         run: git commit -m "Auto updating listingi.db"
       - name: pull from main
         run: git pull origin main
-      - name: fetch from main
-        run: git fetch origin main
       - name: push code to main
         run: git push origin HEAD:main
