@@ -80,8 +80,8 @@ def send_message(chat_id="1437944800"):
             connection.commit()
         else:
             pass
-    #cursor.execute("DELETE FROM listingi WHERE title LIKE '%<h3> Gate.io Startup Initial Offering: Solvent(SVT) </h3>%'")
-    #connection.commit()
+    cursor.execute("DELETE FROM listingi WHERE title LIKE '%<h3> Gate.io Startup Initial Offering: Solvent(SVT) </h3>%'")
+    connection.commit()
 
     cursor.close()
     connection.close()
