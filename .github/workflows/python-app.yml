@@ -25,15 +25,15 @@ jobs:
           pip install -r requirements.txt
       - name: Run tests
         run: python gate.py
-        - name: switching from HTTPS to SSH
-          run: git remote set-url origin https://github.com/mitus1212/Listings-Bot.git
-        - name: check for changes
-          run: git status
-        - name: stage changed files
-          run: git add .
-        - name: commit changed files
-          run: git commit -m "Auto updating listingi.db"
-        - name: fetch from master
-          run: git fetch origin master
-        - name: push code to master
-          run: git push origin HEAD:master
+      - name: switching from HTTPS to SSH
+        run: git remote set-url origin https://github.com/mitus1212/Listings-Bot.git
+      - name: check for changes
+        run: git status
+      - name: stage changed files
+        run: git add .
+      - name: commit changed files
+        run: git commit -m "Auto updating listingi.db"
+      - name: fetch from master
+        run: git fetch origin master
+      - name: push code to master
+        run: git push origin HEAD:master
