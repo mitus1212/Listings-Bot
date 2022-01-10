@@ -78,10 +78,15 @@ def send_message(chat_id="1437944800"):
             cursor.execute("INSERT INTO listingi VALUES ('{text}')".format(text=new_row))
             message = requests.post("https://api.telegram.org/bot"+ bot + "/sendMessage?chat_id=" + chat_id + "&text=https://www.binance.com/en/support/announcement/c-48?navId=48", data=parameters)
             connection.commit()
+        elif "will list" in new_row and ("{new_row}".format(new_row=new_row),) not in fetch:
+            cursor.execute("INSERT INTO listingi VALUES ('{text}')".format(text=new_row))
+            message = requests.post("https://api.telegram.org/bot"+ bot + "/sendMessage?chat_id=" + chat_id + "&text=https://www.binance.com/en/support/announcement/c-48?navId=48", data=parameters)
+            connection.commit()
         else:
             pass
     #cursor.execute("DELETE FROM listingi WHERE title LIKE '%<h3> Gate.io Startup Initial Offering: Solvent(SVT) </h3>%'")
     #connection.commit()
+    message = requests.post("https://api.telegram.org/bot"+ bot + "/sendMessage?chat_id=" + chat_id + "&text=TEST", data=parameters)
 
     cursor.close()
     connection.close()
