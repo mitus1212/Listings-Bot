@@ -87,8 +87,8 @@ def send_message(chat_id="1437944800"):
     connection.close()
 
 
-send_message("1437944800")
-#send_messae("-643192834")
+#send_message("1437944800")
+send_message("-643192834")
 
 
 
