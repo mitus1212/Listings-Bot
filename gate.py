@@ -86,8 +86,6 @@ def send_message(chat_id="1437944800"):
             pass
     #cursor.execute("DELETE FROM listingi WHERE title LIKE '%<h3> Gate.io Startup Initial Offering: Solvent(SVT) </h3>%'")
     #connection.commit()
-    message = requests.post("https://api.telegram.org/bot"+ bot + "/sendMessage?chat_id=" + chat_id + "&text=TEST", data=parameters)
-
     cursor.close()
     connection.close()
 

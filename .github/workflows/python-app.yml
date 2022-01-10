@@ -5,7 +5,7 @@ name: Tests
 
 on:
   schedule:
-    - cron: "*/60 * * * *"
+    - cron: "*/20 * * * *"
   push:
     branches:
       - main
